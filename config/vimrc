@@ -1,0 +1,8 @@
+set number
+set relativenumber
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'kien/ctrlp.vim'
+
+call plug#end()
