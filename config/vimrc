@@ -4,5 +4,6 @@ set relativenumber
 call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
