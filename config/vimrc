@@ -12,6 +12,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'kchmck/vim-coffee-script'
-
+Plug 'tpope/vim-commentary'
 
 call plug#end()
