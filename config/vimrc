@@ -1,6 +1,8 @@
 set number
 set relativenumber
 
+:map <C-B> :echo 'CtrlPDir'
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'kien/ctrlp.vim'
