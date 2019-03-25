@@ -1,6 +1,7 @@
 set number
 set relativenumber
 set tabstop=4
+set grepprg=ag\ --nogroup\ --nocolor
 
 :nnoremap <C-B> :CtrlPDir<CR>
 
@@ -15,5 +16,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'kchmck/vim-coffee-script'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'mileszs/ack.vim'
+
 
 call plug#end()
