@@ -1,7 +1,11 @@
 set number
 set relativenumber
-set tabstop=4
+set tabstop=2
 set grepprg=ag\ --nogroup\ --nocolor
+
+syntax enable
+
+colorscheme monokai
 
 :nnoremap <C-B> :CtrlPDir<CR>
 :nnoremap <C-f> :Ack
