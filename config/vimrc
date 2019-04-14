@@ -1,19 +1,21 @@
 set number
 set relativenumber
 set tabstop=2
-set grepprg=ag\ --nogroup\ --nocolor
+
+if executable('ag')
+	set grepprg=ag\ --nogroup\ --nocolor
+	let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+	let g:ctrlp_use_caching = 0
+
+	command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+endif
 
 syntax enable
 
-colorscheme monokai
-colorscheme railscasts
-
 :nnoremap <C-B> :CtrlPDir<CR>
-:nnoremap <C-f> :Ack 
+:nnoremap <C-f> :Ag
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-let g:ctrlp_use_caching = 0
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 40
 
